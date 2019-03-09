@@ -1,0 +1,54 @@
+{
+    "name": "cdo9/laravel-sass-mixins",
+    "description": "",
+    "keywords": [
+        "cdo9",
+        "laravel-sass-mixins"
+    ],
+    "homepage": "https://github.com/cdo9/laravel-sass-mixins",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Christophe",
+            "email": "cdo_outeiro@me.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cdo9\\LaravelSassMixins\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cdo9\\LaravelSassMixins\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cdo9\\LaravelSassMixins\\LaravelSassMixinsServiceProvider"
+            ],
+            "aliases": {
+                "LaravelSassMixins": "Cdo9\\LaravelSassMixins\\LaravelSassMixinsFacade"
+            }
+        }
+    }
+}
